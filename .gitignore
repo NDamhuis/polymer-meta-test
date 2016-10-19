@@ -1,0 +1,13 @@
+.DS_Store
+npm-debug.log
+node_modules
+.idea/
+*.sass-cache
+*.sublime-workspace
+bower_components
+dist
+temp
+app/styles/*.css
+app/styles/*.map
+test/integration/report
+test/unit/report
