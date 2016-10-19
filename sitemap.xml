@@ -3,7 +3,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
 
-       <loc>https://polymer-meta-test.pubstorm.site/</loc>
+       <loc>https://polymer-meta-test.herokuapp.com/</loc>
 
        <lastmod>2016-10-19</lastmod>
 
@@ -14,7 +14,7 @@
     </url>
    <url>
 
-      <loc>https://polymer-meta-test.pubstorm.site/primary</loc>
+      <loc>https://polymer-meta-test.herokuapp.com/primary</loc>
 
       <lastmod>2016-10-19</lastmod>
 
@@ -26,7 +26,7 @@
 
    <url>
 
-      <loc>https://polymer-meta-test.pubstorm.site/secondary</loc>
+      <loc>https://polymer-meta-test.herokuapp.com/secondary</loc>
 
       <lastmod>2016-10-19</lastmod>
 
