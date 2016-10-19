@@ -1,0 +1,54 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/app-metadata/app-metadata.html">
+<link rel="import" href="../../bower_components/iron-location/iron-location.html">
+<link rel="import" href="../../bower_components/app-route/app-location.html">
+<link rel="import" href="../../bower_components/app-route/app-route.html">
+<link rel="import" href="../../bower_components/iron-pages/iron-pages.html">
+
+<link rel="import" href="../page-primary/page-primary.html">
+<link rel="import" href="../page-secondary/page-secondary.html">
+
+<dom-module id="public-app">
+    <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <app-location route="{{route}}"></app-location>
+    <app-route
+        route="{{route}}"
+        pattern="/:page"
+        data="{{pageData}}"></app-route>
+        <a href="/primary">Primary</a>
+        <a href="/secondary">Secondary</a>
+    <iron-pages role="main" selected="[[page]]" attr-for-selected="name" id="pages">
+        <page-primary name="primary"></page-primary>
+        <page-secondary name="secondary"></page-secondary>
+    </iron-pages>
+  </template>
+
+    <script>
+        Polymer({
+            is: 'public-app',
+            properties: {
+                route: Object,
+                origin: {
+                    type: String
+                },
+                page: {
+                    type: String,
+                    reflectToAttribute: true
+                }
+            },
+            observers: [
+                '_routePageChanged(pageData.page)'
+            ],
+            _routePageChanged: function (page) {
+                this.page = page || 'primary';
+                var pageElement = this.querySelector('page-' + this.page);
+                pageElement.onPreLoad();
+            }
+        });
+    </script>
+</dom-module>

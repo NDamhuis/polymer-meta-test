@@ -1,0 +1,21 @@
+{
+  "name": "polymer meta tags test",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.html",
+  "author": "Nan <nandamhuis@hotmail.com>",
+  "engines": {
+    "node": "5.10.0"
+  },
+  "dependencies": {
+    "bower": "^1.7.9",
+    "express": "^4.14.0",
+    "http-server": "^0.9.0",
+    "web-component-tester": "4.3.1"
+  },
+  "scripts": {
+    "start": "node serve.js",
+    "postinstall": "bower install"
+  },
+  "license": "ISC"
+}

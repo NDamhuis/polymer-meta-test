@@ -1,0 +1,28 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/app-metadata/app-metadata.html">
+
+<dom-module id="page-secondary">
+    <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>Secondary</h2>
+  </template>
+
+    <script>
+        Polymer({
+            is: 'page-secondary',
+            onPreLoad: function () {
+                Polymer.AppMetadata.requestAvailability();
+                var d = new Date();
+                this.fire('app-metadata', {
+                    title: '[' + d.toString() +'] This is the secondary page title',
+                    description: 'Description secondary' + '[' + d.toString() +']',
+                    keywords: 'secondary, page, tag'
+                });
+            }
+        });
+    </script>
+</dom-module>
